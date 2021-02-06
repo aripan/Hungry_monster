@@ -1,3 +1,24 @@
 h1 {
   color: red;
 }
+
+#all-meals {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 20px;
+}
+
+.individual-meal {
+  width: 300px;
+  height: 400px;
+  margin: 5px 20px;
+  text-align: center;
+  border: 1px solid red;
+  border-radius: 20px;
+  box-shadow: 5px 10px 10px rgba(128, 128, 128, 0.555);
+}
+.individual-meal img {
+  width: 100%;
+
+  border-radius: 20px 20px 0 0;
+}
