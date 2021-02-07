@@ -1,31 +1,40 @@
+html {
+  scroll-behavior: smooth;
+}
+
+/* Search Bar  */
+#search-bar {
+  display: flex;
+  margin-left: 30%;
+}
+
 #search {
   width: 40%;
   height: 50px;
-  margin: 0 30%;
   padding: 5px;
-}
-#all-meals {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  grid-gap: 10px;
-  margin: 0 30px;
+  background: #f8f7f5;
+  border-radius: 10px 0 0 10px;
 }
 
-.individual-meal {
-  width: 200px;
-  margin: 20px;
+button {
+  width: 15%;
+  font-size: 1rem;
+  background: #f06c4e;
+  color: #fff;
+  border-radius: 0 10px 10px 0;
+}
+
+/* Handling Invalid Search Options */
+#invalid-search {
   text-align: center;
-  border-radius: 20px;
-  box-shadow: 10px 20px 20px rgb(128, 128, 128);
-}
-.individual-meal img {
-  width: 100%;
-  border-radius: 20px 20px 0 0;
+  color: rgb(192, 58, 58);
 }
 
+/* Individual Meal Information */
 #individual-meal-info {
   padding-left: 35%;
 }
+
 #individual-meal-info img {
   width: 400px;
   border-radius: 20px;
@@ -37,7 +46,24 @@
   font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
-#invalid-search {
+.individual-meal {
+  width: 200px;
+  margin: 20px;
   text-align: center;
-  color: rgb(192, 58, 58);
+  border-radius: 20px;
+  box-shadow: 10px 20px 20px rgb(128, 128, 128);
+  cursor: pointer;
+}
+
+.individual-meal img {
+  width: 100%;
+  border-radius: 20px 20px 0 0;
+}
+
+/* All Meals Information */
+#all-meals {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-gap: 10px;
+  margin: 0 30px;
 }
