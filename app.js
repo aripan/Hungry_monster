@@ -46,30 +46,71 @@ const displayMeals = (mealName) => {
     allMealsDiv.appendChild(individualMealDiv);
 
     individualMealDiv.addEventListener("click", () => {
+      console.log(meal);
       individualMealIfo.innerHTML = `
           <img src="${meal.strMealThumb}">
           <h1>${meal.strMeal}</h1>
           <ul>
-              <li class="list-item">${meal.strMeasure1} ${meal.strIngredient1}</li>
-              <li class="list-item">${meal.strMeasure2} ${meal.strIngredient2}</li>
-              <li class="list-item">${meal.strMeasure3} ${meal.strIngredient3}</li>
-              <li class="list-item">${meal.strMeasure4} ${meal.strIngredient4}</li>
-              <li class="list-item">${meal.strMeasure5} ${meal.strIngredient5}</li>
-              <li class="list-item">${meal.strMeasure6} ${meal.strIngredient6}</li>
-              <li class="list-item">${meal.strMeasure7} ${meal.strIngredient7}</li>
-              <li class="list-item">${meal.strMeasure8} ${meal.strIngredient8}</li>
-              <li class="list-item">${meal.strMeasure9} ${meal.strIngredient9}</li>
-              <li class="list-item">${meal.strMeasure10} ${meal.strIngredient10}</li>
-              <li class="list-item">${meal.strMeasure11} ${meal.strIngredient11}</li>
-              <li class="list-item">${meal.strMeasure12} ${meal.strIngredient12}</li>
-              <li class="list-item">${meal.strMeasure13} ${meal.strIngredient13}</li>
-              <li class="list-item">${meal.strMeasure14} ${meal.strIngredient14}</li>
-              <li class="list-item">${meal.strMeasure15} ${meal.strIngredient15}</li>
-              <li class="list-item">${meal.strMeasure16} ${meal.strIngredient16}</li>
-              <li class="list-item">${meal.strMeasure17} ${meal.strIngredient17}</li>
-              <li class="list-item">${meal.strMeasure18} ${meal.strIngredient18}</li>
-              <li class="list-item">${meal.strMeasure19} ${meal.strIngredient19}</li>
-              <li class="list-item">${meal.strMeasure20} ${meal.strIngredient20}</li>
+              <li class="list-item">${
+                meal.strMeasure1 ? meal.strMeasure1 : ""
+              } ${meal.strIngredient1 ? meal.strIngredient1 : ""}</li>
+              <li class="list-item">${
+                meal.strMeasure2 ? meal.strMeasure2 : ""
+              } ${meal.strIngredient2 ? meal.strIngredient2 : ""}</li>
+              <li class="list-item">${
+                meal.strMeasure3 ? meal.strMeasure3 : ""
+              } ${meal.strIngredient3 ? meal.strIngredient3 : ""}</li>
+              <li class="list-item">${
+                meal.strMeasure4 ? meal.strMeasure4 : ""
+              } ${meal.strIngredient4 ? meal.strIngredient4 : ""}</li>
+              <li class="list-item">${
+                meal.strMeasure5 ? meal.strMeasure5 : ""
+              } ${meal.strIngredient5 ? meal.strIngredient5 : ""}</li>
+              <li class="list-item">${
+                meal.strMeasure6 ? meal.strMeasure6 : ""
+              } ${meal.strIngredient6 ? meal.strIngredient6 : ""}</li>
+              <li class="list-item">${
+                meal.strMeasure7 ? meal.strMeasure7 : ""
+              } ${meal.strIngredient7 ? meal.strIngredient7 : ""}</li>
+              <li class="list-item">${
+                meal.strMeasure8 ? meal.strMeasure8 : ""
+              } ${meal.strIngredient8 ? meal.strIngredient8 : ""}</li>
+              <li class="list-item">${
+                meal.strMeasure9 ? meal.strMeasure9 : ""
+              } ${meal.strIngredient9 ? meal.strIngredient9 : ""}</li>
+              <li class="list-item">${
+                meal.strMeasure10 ? meal.strMeasure10 : ""
+              } ${meal.strIngredient10 ? meal.strIngredient10 : ""}</li>
+              <li class="list-item">${
+                meal.strMeasure11 ? meal.strMeasure11 : ""
+              } ${meal.strIngredient11 ? meal.strIngredient11 : ""}</li>
+              <li class="list-item">${
+                meal.strMeasure12 ? meal.strMeasure12 : ""
+              } ${meal.strIngredient12 ? meal.strIngredient12 : ""}</li>
+              <li class="list-item">${
+                meal.strMeasure13 ? meal.strMeasure13 : ""
+              } ${meal.strIngredient13 ? meal.strIngredient13 : ""}</li>
+              <li class="list-item">${
+                meal.strMeasure14 ? meal.strMeasure14 : ""
+              } ${meal.strIngredient14 ? meal.strIngredient14 : ""}</li>
+              <li class="list-item">${
+                meal.strMeasure15 ? meal.strMeasure15 : ""
+              } ${meal.strIngredient15 ? meal.strIngredient15 : ""}</li>
+              <li class="list-item">${
+                meal.strMeasure16 ? meal.strMeasure16 : ""
+              } ${meal.strIngredient16 ? meal.strIngredient16 : ""}</li>
+              <li class="list-item">${
+                meal.strMeasure17 ? meal.strMeasure17 : ""
+              } ${meal.strIngredient17 ? meal.strIngredient17 : ""}</li>
+              <li class="list-item">${
+                meal.strMeasure18 ? meal.strMeasure18 : ""
+              } ${meal.strIngredient18 ? meal.strIngredient18 : ""}</li>
+              <li class="list-item">${
+                meal.strMeasure19 ? meal.strMeasure19 : ""
+              } ${meal.strIngredient19 ? meal.strIngredient19 : ""}</li>
+              <li class="list-item">${
+                meal.strMeasure20 ? meal.strMeasure20 : ""
+              } ${meal.strIngredient20 ? meal.strIngredient20 : ""}</li>
           </ul>`;
 
       const ingredientsLists = document.getElementsByClassName("list-item");
