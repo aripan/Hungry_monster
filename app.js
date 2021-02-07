@@ -25,22 +25,25 @@ const showSearchResult = () => {
   allMealsDiv.innerHTML = "";
 
   const inputValue = document.getElementById("search").value;
-
-  fetch(`https://www.themealdb.com/api/json/v1/1/search.php?s=${inputValue}`)
-    .then((res) => res.json())
-    .then((data) => {
-      if (!data.meals || inputValue == "") {
-        invalidSearch.innerHTML = `<h1>INVALID SEARCH</h1>`;
-      } else {
-        invalidSearch.innerHTML = "";
-        displayMeals(data.meals);
-      }
-    });
-  // .then((data) => {
-  //   for (let i = 0; i < data.meals.length; i++) {
-  //     console.log(data.meals[i].strMeal);
-  //   }
-  // });
+  console.log(inputValue.length);
+  if (inputValue == 0) {
+    invalidSearch.innerHTML = `<h1>INVALID SEARCH...</h1>
+          <h4>Please write the name properly.</h4>
+          `;
+  } else {
+    fetch(`https://www.themealdb.com/api/json/v1/1/search.php?s=${inputValue}`)
+      .then((res) => res.json())
+      .then((data) => {
+        if (!data.meals) {
+          invalidSearch.innerHTML = `<h1>INVALID SEARCH...</h1>
+          <h4>Please write the name properly.</h4>
+          `;
+        } else {
+          invalidSearch.innerHTML = "";
+          displayMeals(data.meals);
+        }
+      });
+  }
 };
 
 searchOption.addEventListener("change", showSearchResult);
