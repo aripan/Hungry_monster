@@ -1,24 +1,39 @@
-h1 {
-  color: red;
+#search {
+  width: 40%;
+  height: 50px;
+  margin: 0 30%;
+  padding: 5px;
 }
-
 #all-meals {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  grid-gap: 20px;
+  grid-template-columns: repeat(4, 1fr);
+  grid-gap: 10px;
+  margin: 0 30px;
 }
 
 .individual-meal {
-  width: 300px;
-  height: 400px;
-  margin: 5px 20px;
+  width: 200px;
+  margin: 20px;
   text-align: center;
-  border: 1px solid red;
   border-radius: 20px;
-  box-shadow: 5px 10px 10px rgba(128, 128, 128, 0.555);
+  box-shadow: 10px 20px 20px rgb(128, 128, 128);
 }
 .individual-meal img {
   width: 100%;
-
   border-radius: 20px 20px 0 0;
+}
+
+#individual-meal-info,
+#invalid-search {
+  padding-left: 35%;
+}
+#individual-meal-info img {
+  width: 400px;
+  border-radius: 20px;
+}
+
+#individual-meal-info ul li {
+  list-style: none;
+  font-size: 20px;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
