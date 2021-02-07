@@ -2,6 +2,10 @@ html {
   scroll-behavior: smooth;
 }
 
+body {
+  box-sizing: border-box;
+}
+
 /* Search Bar  */
 #search-bar {
   display: flex;

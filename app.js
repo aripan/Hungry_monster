@@ -46,7 +46,6 @@ const displayMeals = (mealName) => {
     allMealsDiv.appendChild(individualMealDiv);
 
     individualMealDiv.addEventListener("click", () => {
-      console.log(meal);
       individualMealIfo.innerHTML = `
           <img src="${meal.strMealThumb}">
           <h1>${meal.strMeal}</h1>
