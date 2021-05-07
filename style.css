@@ -7,25 +7,16 @@ body {
 }
 
 /* Search Bar  */
-#search-bar {
+/* #search-bar {
   display: flex;
-  margin-left: 30%;
-}
+} */
 
 #search {
-  width: 40%;
+  min-width: 80%;
   height: 50px;
   padding: 5px;
   background: #f8f7f5;
   border-radius: 10px 0 0 10px;
-}
-
-button {
-  width: 15%;
-  font-size: 1rem;
-  background: #f06c4e;
-  color: #fff;
-  border-radius: 0 10px 10px 0;
 }
 
 /* Handling Invalid Search Options */
@@ -69,5 +60,36 @@ button {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   grid-gap: 10px;
-  margin: 0 30px;
+  justify-content: center;
+  align-self: center;
+}
+
+/* Medium devices (tablets, less than 992px) */
+@media (max-width: 991.98px) {
+  #all-meals {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 10px;
+    margin: 0 30px;
+  }
+}
+
+/* Small devices (landscape phones, less than 768px) */
+@media (max-width: 767.98px) {
+  #all-meals {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 10px;
+    margin: 0 30px;
+  }
+}
+
+/* X-Small devices (portrait phones, less than 576px) */
+@media (max-width: 575.98px) {
+  #all-meals {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    grid-gap: 10px;
+    margin: 0 30px;
+  }
 }

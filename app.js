@@ -3,7 +3,7 @@ const invalidSearch = document.getElementById("invalid-search");
 const individualMealIfo = document.getElementById("individual-meal-info");
 const allMealsDiv = document.getElementById("all-meals");
 
-const showSearchResult = () => {
+const showSearchResult = (e) => {
   individualMealIfo.innerHTML = "";
   allMealsDiv.innerHTML = "";
 
